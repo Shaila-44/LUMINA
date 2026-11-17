@@ -1,0 +1,18 @@
+# ─── Backend .gitignore ───────────────────────────────────────
+# Maven build output
+target/
+
+# Local secrets — NEVER commit these
+application-local.properties
+*.local.properties
+.env
+.env.*
+!.env.example
+
+# IDE & OS
+.idea/
+*.iml
+.DS_Store
+*.class
+*.jar
+*.war

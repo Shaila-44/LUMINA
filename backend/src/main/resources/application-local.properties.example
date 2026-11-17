@@ -1,0 +1,32 @@
+# ═══════════════════════════════════════════════════════════════
+# LOCAL SECRET TEMPLATE — application-local.properties.example
+#
+# 1. Copy this file:
+#       cp application-local.properties.example application-local.properties
+# 2. Fill in your real values in application-local.properties
+# 3. NEVER commit application-local.properties  (it is in .gitignore)
+#
+# To activate: add  application-local  to spring.profiles.active
+# or set all values as environment variables instead.
+# ═══════════════════════════════════════════════════════════════
+
+# ── Database ──────────────────────────────────────────────────
+DB_URL=jdbc:mysql://localhost:3306/ajay
+DB_USERNAME=root
+DB_PASSWORD=CHANGE_ME
+
+# ── JWT ───────────────────────────────────────────────────────
+# Generate with:  openssl rand -base64 32
+JWT_SECRET=CHANGE_ME_USE_openssl_rand_-base64_32
+
+# ── Mail / SMTP ───────────────────────────────────────────────
+MAIL_USERNAME=your-email@gmail.com
+MAIL_PASSWORD=your-app-password
+
+# ── Demo Mode ─────────────────────────────────────────────────
+# true  → enables /api/auth/demo  (dev/staging only)
+# false → endpoint returns 404
+DEMO_MODE_ENABLED=true
+
+# ── Profile ───────────────────────────────────────────────────
+SPRING_PROFILES_ACTIVE=dev
